@@ -1,0 +1,132 @@
+<?php
+
+namespace IK\Bundle\ParserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Color
+ *
+ * @ORM\Table(name="color")
+ * @ORM\Entity(repositoryClass="IK\Bundle\ParserBundle\Repository\ColorRepository")
+ */
+class Color
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sort", type="string", length=255, nullable=true)
+     */
+    private $sort;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pantone", type="string", length=255, nullable=true)
+     */
+    private $pantone;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="IK\Bundle\ParserBundle\Entity\Product", inversedBy="images" , cascade={"persist"})
+     */
+    private $product;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Color
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set sort
+     *
+     * @param string $sort
+     *
+     * @return Color
+     */
+    public function setSort($sort)
+    {
+        $this->sort = $sort;
+
+        return $this;
+    }
+
+    /**
+     * Get sort
+     *
+     * @return string
+     */
+    public function getSort()
+    {
+        return $this->sort;
+    }
+
+    /**
+     * Set pantone
+     *
+     * @param string $pantone
+     *
+     * @return Color
+     */
+    public function setPantone($pantone)
+    {
+        $this->pantone = $pantone;
+
+        return $this;
+    }
+
+    /**
+     * Get pantone
+     *
+     * @return string
+     */
+    public function getPantone()
+    {
+        return $this->pantone;
+    }
+}
+

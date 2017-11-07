@@ -1,0 +1,4 @@
+ik_bundle_parser:
+    resource: "@IKBundleParserBundle/Controller/"
+    type:     annotation
+    prefix:   /

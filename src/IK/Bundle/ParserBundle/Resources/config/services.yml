@@ -1,0 +1,7 @@
+services:
+#    ik_bundle_parser.example:
+#        class: IK\Bundle\ParserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    ik_bundle_XmlParserService:
+        class: IK\Bundle\ParserBundle\Service\XmlParserService
+        arguments: ["@doctrine"]

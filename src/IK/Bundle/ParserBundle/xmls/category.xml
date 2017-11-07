@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+    <item>
+        <id>1689</id>
+        <parent_id/>
+        <root>1689</root>
+        <lft>1</lft>
+        <rgt>1520</rgt>
+        <level>1</level>
+        <slug>katalogi</slug>
+        <name>Каталоги</name>
+        <path>katalogi</path>
+    </item>
+    <item>
+        <id>1228</id>
+        <parent_id>1689</parent_id>
+        <root>1689</root>
+        <lft>328</lft>
+        <rgt>505</rgt>
+        <level>2</level>
+        <slug>business-2014</slug>
+        <name>Бизнес 2014</name>
+        <path>katalogi/business-2014</path>
+    </item>
+    <item>
+        <id>399</id>
+        <parent_id>1228</parent_id>
+        <root>1689</root>
+        <lft>501</lft>
+        <rgt>502</rgt>
+        <level>3</level>
+        <slug>sales</slug>
+        <name>Цены снижены</name>
+        <path>katalogi/business-2014/sales</path>
+    </item>
+</response>

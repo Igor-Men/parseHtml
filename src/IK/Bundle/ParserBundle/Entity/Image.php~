@@ -1,0 +1,165 @@
+<?php
+
+namespace IK\Bundle\ParserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Image
+ *
+ * @ORM\Table(name="image")
+ * @ORM\Entity(repositoryClass="IK\Bundle\ParserBundle\Repository\ImageRepository")
+ */
+class Image
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="big", type="string", length=255)
+     */
+    private $big;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="superbig", type="string", length=255, nullable=true)
+     */
+    private $superbig;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="thumbnail", type="string", length=255, nullable=true)
+     */
+    private $thumbnail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="updated_at", type="string", length=255, nullable=true)
+     */
+    private $updatedAt;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="IK\Bundle\ParserBundle\Entity\Product", inversedBy="images" , cascade={"persist"})
+     */
+    private $product;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set big
+     *
+     * @param string $big
+     *
+     * @return Image
+     */
+    public function setBig($big)
+    {
+        $this->big = $big;
+
+        return $this;
+    }
+
+    /**
+     * Get big
+     *
+     * @return string
+     */
+    public function getBig()
+    {
+        return $this->big;
+    }
+
+    /**
+     * Set superbig
+     *
+     * @param string $superbig
+     *
+     * @return Image
+     */
+    public function setSuperbig($superbig)
+    {
+        $this->superbig = $superbig;
+
+        return $this;
+    }
+
+    /**
+     * Get superbig
+     *
+     * @return string
+     */
+    public function getSuperbig()
+    {
+        return $this->superbig;
+    }
+
+    /**
+     * Set thumbnail
+     *
+     * @param string $thumbnail
+     *
+     * @return Image
+     */
+    public function setThumbnail($thumbnail)
+    {
+        $this->thumbnail = $thumbnail;
+
+        return $this;
+    }
+
+    /**
+     * Get thumbnail
+     *
+     * @return string
+     */
+    public function getThumbnail()
+    {
+        return $this->thumbnail;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param string $updatedAt
+     *
+     * @return Image
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+}
+
